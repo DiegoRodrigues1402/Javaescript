@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de velocidade</title>
+</head>
+<body>
+<h1>teste 3</h1>
+    
+
+
+
+
+<input type="text" name="" id="texto">
+<input type="button" value="clicar" onclick="clicar()">
+<div id="resultado">Resultado</div>
+ <script>
+        
+        
+function clicar(){
+
+var n2 =document.getElementById('texto')
+
+var res = document.getElementById('resultado')
+var n3 =(n2.value)
+res.innerHTML=n3
+
+if(n3=='Brasil'){
+
+
+
+res.innerHTML+='</br>  vc e brasileiro  '
+
+
+}else{
+
+
+
+res.innerHTML+=' </br> vc e estrangeiro  '
+}
+
+}
+
+</script>
+</body>
+</html>

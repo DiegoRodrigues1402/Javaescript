@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apredendo Dom</title>
+    <style>
+        div{
+            background-color: rgba(103, 130, 77, 0.556);
+            width: 200px;
+            height: 200px;
+            color:white;
+            line-height: 200px;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+   <!-- <h1 id='msm'>aprendendo dom</h1>
+    <p onclick="clicar">clique aqui</p>
+    <p id='res'>resultado</p>-->
+    
+    <div id="area"     onmouseout="saiu()">interaja</div>
+    <script>
+        var r = document.getElementById('area')
+        r.addEventListener('click',clicar)//podemos usar assim
+        r.addEventListener('mouseenter',entrou)//porem nao podemos por o on
+        function clicar(){
+            
+            r.innerHTML="clicou"
+            
+        }
+        function entrou(){
+            r.innerHTML='entrou'
+        }
+        function saiu(){
+            r.innerHTML='saiu'
+        }
+       // var corpo =document.body
+      // var p1 =document.getElementsByTagName('p')[0]
+      // document.write(p1.innerText)
+      // p1.style.color='red'
+      // corpo.style.fontSize='30px'
+       //corpo.style.fontFamily='arial'
+      // var res = document.getElementById('res')
+      // res.innerText='vai corinthians'
+      // var msm = document.querySelector('h1#msm')
+      //  msm.innerHTML ="aprendi mesmo eu sou de mais"
+    </script>
+</body>
+</html>

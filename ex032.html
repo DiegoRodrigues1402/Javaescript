@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#res{
+            text-align: center;
+            margin: auto;
+            background-color: rgb(146, 138, 138);
+            height: 400px;
+            width: 700px;
+        }
+        img#foto{
+            
+            border-radius: 50%;
+        }
+       
+    </style>
+</head>
+<div id="res">
+
+     <img id="foto" >
+    </div>
+<body>
+   <script>
+      
+       var n1=5
+       var c = 1
+       var res= document.getElementById('res')
+       var foto=document.getElementById('foto')
+       document.body.style.background='green'
+       var di= 'diego gatao'
+       //res.innerHTML+=di
+       foto.src+="jovem-masc.jpg"  //preciso sempre colocar dentro div
+      
+      
+      
+       while(c<=10){
+            document.write(`${n1}x${c}=${n1*c}<br>`)
+            
+           c=c+1
+       }
+   </script> 
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="number" name="numero" id="txtn1">
+    <input type="number" name="numero" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id ="res">resultado</div>
+    <script>
+        //var n1=Number(prompt('digite um numero'))
+        //var n2 =Number(prompt('digite outro numero')) 
+        
+        //var res = n1 + n2
+       //document.write(res)
+      function somar(){
+          var nu1 = document.getElementById('txtn1')
+          var nu2 =  document.getElementById('txtn2')
+          var res =  document.getElementById('res')
+          var n1 = Number(nu1.value)
+          var n2 = Number(nu2.value)
+          var s = n1 + n2
+          res.innerHTML=s
+
+      }
+    </script>
+    
+</body>
+</html>

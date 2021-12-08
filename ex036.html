@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+           <p>Numero  <input type="number" name="numero" id="numero">
+            <input type="button" value="gerar"onclick="gerar()"></p> 
+        </div>
+
+        <div >
+            <select name="tabuada" id="tabuada"size='4' >
+                <option  >digite um numero acima</option>
+                <option  ></option>
+                <option  ></option>
+                <option  ></option>
+              
+             
+            </select>
+        </div>
+
+    </section>
+    <script>
+        function gerar(){
+            var n1 = document.getElementById('numero')
+            var tab = document.getElementById('tabuada')
+            if(n1.value.length == 0){
+              alert('erro digite um numero')
+          }else{
+            var n =Number(n1.value)
+            
+            for(var c=1;c<=4;c++){
+                var item= document.getElementsByTagName('option')[0]
+          
+            item.text=`${n} X ${c} = ${n*c}`
+           tab.appendChild(item)
+            }
+            
+          }
+         
+           
+         
+           
+            
+            
+           
+          
+            
+            
+            
+        }
+        
+        
+    </script>
+</body>
+</html>

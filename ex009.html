@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de velocidade</title>
+</head>
+<body>
+<h1>teste 2</h1>
+    <input type="number" name="" id="numero">
+<input type="button" value="velocidade" onclick="velocidade()">
+
+<div id="vel">resultado</div>
+    <script>
+
+function velocidade(){
+
+var n1 = document.getElementById('numero')
+
+var n3 =Number(n1.value)
+
+var res = document.getElementById('vel')
+res.innerHTML='sua velocidade é'+n3+'</br>'
+
+
+if(n3>60){
+
+res.innerHTML+=('voce foi multado</br>')
+
+
+}
+res.innerHTML+='dirija com sinto segurança</br>'
+
+}
+</script>
+</body>
+</html>

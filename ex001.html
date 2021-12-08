@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>teste do diego</h1>
+
+    <input type="number" name="numero" id="numero">
+    <input type="number" name="numero1" id="numero1">
+    <input type="button" value="pumm" onclick="clicar()">
+<p  id="resultado"> resultado</p>
+
+<script>
+
+
+function clicar(){
+var n1 =document.getElementById('numero')
+var n2 =document.getElementById('numero1')
+var nu1 =Number(n1.value)
+var nu2 = Number(n2.value)
+var s = nu1+nu2 
+var res =document.getElementById('resultado')
+res.innerHTML= s
+}
+alert('diego')
+</script>
+</body>
+</html>

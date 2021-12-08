@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <p><input type="number" name="num" id="nascimento"> <input type="button" value="ano" onclick="ano1()"></p>
+<input type="radio" name="sexo" id="mas" checked>
+<label for="masculino">masculino</label>
+<input type="radio" name="sexo" id="fem">
+<label for="feminino">feminino</label>
+<img id="foto">
+
+
+ <p id="resultado">Aqui vai o resultado</p>
+   
+</div>
+<script>
+function ano1(){
+            var data = new Date()
+            var ano =data.getFullYear()
+            var ida = document.getElementById('nascimento')
+            var res = document.getElementById('resultado')
+            var mas = document.getElementById('mas')
+            var fem = document.getElementById('fem')
+           
+            var foto =document.getElementById('foto')
+
+            if(ida.value.length == 0 || ida.value > ano){ 
+                alert( 'digite novamente erro')
+        }else {
+            var idade = ano - Number(ida.value)
+            var genero=''
+            
+
+        } if(mas.checked){
+            genero='masculino'
+           if(idade<20){  foto.src='manha.jpg'}
+
+        }else if(fem.checked){
+            genero='feminino'
+           if(idade < 30){  foto.src='modelo/tarde.png'}
+           
+        }
+         res.innerHTML=idade + genero
+
+
+
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .leg{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Aula de Eventos</h1>
+    <p id= "legenda" class="leg">aqui va a legenda</p>
+    <div > 
+       
+    </div>
+    <script>
+       
+      var c1 = document.querySelector('h1')
+      
+       c1.addEventListener('mouseover', entrou)
+        c1.addEventListener('mouseout',mou)
+        var legenda= document.querySelector('#legenda')
+       
+       function entrou(){
+        
+        c1.style.background='#808080'
+        
+        legenda.classList.remove('leg')
+        
+       }
+       function mou(){
+           c1.style.background='white'
+           legenda.classList.add('leg')
+           
+       }
+       
+    </script>
+</body>
+</html>

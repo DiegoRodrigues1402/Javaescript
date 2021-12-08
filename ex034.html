@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(57, 57, 252);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+        header{
+            margin: auto;
+            text-align: center;
+        }
+        section{
+            margin: auto;
+            background-color: burlywood;
+            text-align: justify;
+            width: 350px;
+            
+            padding: 7px;
+            color: black;
+
+        }
+        footer{
+            text-align: center;
+        }
+        div#res{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Hora de contar</h1></header>
+    <section>
+        <div>
+          <p> Inicio:<input type="number" name="inicio" id="inicio"></p> 
+         <p> FIM :<input type="number" name="fim" id="fim"></p> 
+          <p> Passo :<input type="number" name="passo" id="passo"></p> 
+           <p><input type="button" value="apertar" onclick="contar()"></p> 
+        </div>
+        <div id="res">
+            
+        </div>
+    </section>
+    <footer><p>&copy curso em video</p></footer>
+     <script>
+         function contar(){
+             
+            var   ini = document.getElementById('inicio') 
+             var fi =document.getElementById('fim') 
+             var pa = document.getElementById('passo') 
+             var res = document.getElementById('res')
+             if(ini.value.length==0 || fi.value.length==0 || pa.value.length==0){
+                 res.innerHTML='impossível contar'
+             }else{
+                 res.innerHTML= 'contando'
+             
+             
+             var i = Number(ini.value)
+             var f = Number(fi.value)
+             var p = Number(pa.value)
+             if(p==0){
+                 p=1
+             }
+             
+             if(i<f){
+                for(var c = i;c<=f;c += p){
+                 res.innerHTML+= ` ${c} `
+             }
+             }else if(i>f){
+                 for(var c = i;c>f;c-=p){
+                     res.innerHTML+=` ${c} `
+
+                 }
+             }
+             
+             }
+             
+         }
+       
+
+
+
+
+    </script>
+</body>
+</html>

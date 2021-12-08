@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabalhando com switch</title>
+</head>
+<body>
+    <h1>trabalhando com switch</h1>
+<input type="number" name="" id="bloco">
+<input type="button" value="clicar" onclick="clicar()">
+<div id="res">Resultado</div>
+<script>
+
+function clicar(){
+var add= document.getElementById('bloco')
+var res = document.getElementById('res')
+var h =Number(add.value)
+res.innerText=h
+
+    switch(h){
+case 0: res.innerText='domingo'
+    break
+case 1: res.innerText='Segunda feira'
+break
+case 2: res.innerText='Terça feira'
+break
+case 3 : res.innerText='Quarta feira'
+break
+case 4: res.innerText='Quinta feira'
+break
+case 5: res.innerText='Sexta feira'
+break
+case 6: res.innerText='Sabado'
+break
+default: res.innerText='Desculpe este dia não existe'
+    break
+}
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

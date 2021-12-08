@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continuaçao da aula</title>
+    <style>
+        div{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    var di = document.createElement('div')
+    var texto = document.createTextNode('funcionou')
+    di.appendChild(texto)
+    var bo = document.querySelector('body')
+     bo.appendChild(di)
+     var p = document.createElement('p')
+     var te = document.createTextNode('kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk')
+     p.appendChild(te)
+     di.appendChild(p)
+     var pa = document.createElement('p')
+     var t = document.createTextNode('hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh')
+     pa.appendChild(t)
+     di.insertBefore(pa ,p)
+    </script>
+
+</body>
+</html>

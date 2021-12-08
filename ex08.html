@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       div#di1{
+           background-color: aqua;
+           width: 500px;
+           height: 500px;
+
+        }
+        div.di2{
+            width: 200px;
+            background-color: black;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="di1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consectetur eos adipisci ea quaerat, eius soluta qui id voluptate aliquam. Quaerat recusandae libero amet aut, illo ea nobis ullam aliquid.</p>
+    </div>
+    <script>
+        let di = document.createElement('div')
+        di.classList = 'di2'
+        var texto = document.createTextNode('oooooooooooooooo')
+        di.appendChild(texto)
+        let di1= document.querySelector('#di1')
+        di1.appendChild(di)
+        var paragrafo =  document.createElement('p')
+        var texto = document.createTextNode('funcionou')
+        paragrafo.appendChild(texto)
+        var d = document.querySelector('#di1 .di2')
+        
+        di1.insertBefore(texto , d)
+    </script>
+</body>
+</html>

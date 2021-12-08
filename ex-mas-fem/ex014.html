@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+   
+</head>
+<body >
+    <header>
+<h1>Verificador de idade</h1>
+
+</header>
+
+
+<section>
+<div >
+    <p>Ano de nascimento    
+        <input type="number" name="anos" id="formulario"></p>
+        
+        <p>Sexo
+        <input type="radio" name="sexi" id="masc" checked>
+        <label for="masc">Masculino</label>
+        
+        <input type="radio" name="sexi" id="fem">
+        <label for="fem">Feminino</label></p>
+        
+        <p><input type="button" value="verificar" onclick="verificar()"></p>
+
+</div>
+
+<div id="resultado">
+    
+   
+</div>
+<img id="foto">
+
+</section>
+
+<footer> <p> &copy;Curso em video</p></footer>
+
+<script >
+    
+    function verificar(){
+      var data = new Date ()
+       var ano = data.getFullYear ()
+       var tab = document.getElementById('formulario')
+       var res = document.getElementById('resultado')
+    
+        if(tab.value.length == 0 || tab.value > ano){
+            alert('verifique os dados novamente')
+
+        }else {
+            var s =document.getElementById('fem')
+            var sex =document.getElementById('masc')
+            var idade = ano - Number (tab.value)
+            var img = document.getElementById('foto')
+          var genero=''
+        }
+        
+        if( sex.checked){
+            genero='Masculino'
+            if(idade >= 0 && idade <=10){img.src='homem-criança.jpg'}
+            else if(idade<=22){ img.src='homem-jovem.jpg'}
+            else if(idade<=40){img.src='homem-adulto.jpg'}
+            else{img.src='homem-idoso.jpg'}
+        }
+        
+        else if(s.checked){
+            genero='Feminino'
+            if (idade>=0 &&idade<=10){img.src='mulher-criança.jpg'}
+            else if(idade<=22){img.src="mulher-jovem.jpg"}
+            else if(idade<=40){img.src="mulher-adulta.jpg"}
+            else{img.src='mulher-idosa.jpg'}
+            
+        }
+        res.innerHTML=`Sua idade é ${idade} e o sexo é ${genero}`
+
+       }
+     
+   
+  
+
+</script>
+</body>
+</html

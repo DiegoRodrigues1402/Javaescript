@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br
+">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio js</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #606060;
+
+        }
+        h1{
+            text-align: center;
+        }
+      
+        
+        section{
+            text-align: center;
+            width: 500px;
+            background-color: rgb(209, 204, 197);
+            margin: auto;
+            
+        }
+        p{
+            
+            
+            font-size: 20px;
+            padding: 5px;
+        }
+        
+        p#res{
+            text-align: center;
+        }
+        div#le{
+            margin-right: 250px;
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vamos contar?</h1>
+    </header>
+    <section>
+        <div id="le">
+            <p > <input type="number" name="inicio" id="inicio"> Inicio</p>
+            <p > <input type="number" name="fim" id="fim">Fim </p>
+            <p > <input type="number" name="passo" id="passo">Passo </p>
+            <input type="button" value="verificar"onclick="verificar()">
+    </div>
+    <div id="resultado" >
+<p >Preparando a contagem</p>
+    </div>
+    
+    
+    </section>
+    <footer><p id="res"> &copy Curso em video</p></footer>
+<script>
+
+
+
+function verificar(){
+   
+    var ini = document.getElementById('inicio')
+
+    var fi = document.getElementById('fim')
+
+    var pass = document.getElementById('passo')
+
+     var res = document.getElementById('resultado')
+
+        if (ini.value.length == 0 ||fi.value.length==0 || pass.value.length==0)
+        {alert('Erro tente novamente')} 
+    else{
+                res.innerHTML='contando:'
+                var i = Number(ini.value)
+                var f = Number(fi.value)
+                var p = Number(pass.value)
+                
+                if(i<f){
+                        for(var c= i;c<=f;c+=p){
+                        res.innerHTML +=` \u{1f603} ${c}`
+                                                }
+                    }
+                    
+                else {
+                    for(var c=i;c>=f;c-=p ){
+                        res.innerHTML += `\u{1f603}  ${c} `
+                    }
+            
+                    }
+                    res.innerHTML+=`\u{1f3c1}`
+
+
+        }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

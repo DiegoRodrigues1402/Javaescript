@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>criando site</title>
+    <style>
+        body{
+            background-color: #e6d44bce;
+        }
+        header{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+        }
+        aside{
+            background-color: rgba(207, 208, 185, 0.638);
+            width: 500px;
+            height: 300px;
+            margin: auto;
+            border-radius: 20px;
+            padding: 30px;
+        }
+        footer{
+            text-align: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            
+        }
+        div#jan1{
+            font-size: 25px;
+            text-align: center;
+        
+            margin: auto;
+            
+            
+            
+
+        }
+        div#jan2{
+            text-align:center;
+           
+           margin-top: 20px;
+           
+            
+        }
+        img#foto{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body onload="carregar()">
+    <header>Hora do dia</header>
+   
+   <aside>
+       <div id="jan1"></div>
+       <div id="jan2">
+           <img id= "foto">
+       </div>
+   </aside>
+    <footer>Curso em video</footer>
+
+    <script>
+       
+        function carregar(){
+            var foto =document.getElementById('foto')
+        var h = document.getElementById('jan1')
+       var horas= new Date()
+       var hora = horas.getHours()
+        
+        
+        if(hora >= 0 && hora<=12){
+            h.innerHTML=`Agora é ${hora}hs bom dia`
+            foto.src ="bom-dia.jpg"
+            document.body.style.background='#e6d44bce'
+        }else if (hora<=18 ){
+            h.innerHTML=`Agora é ${hora}hs boa tarde`
+            foto.src ="boa-tarde.jpg"
+            document.body.style.backgroundColor='#606060'
+        }else {
+            h.innerHTML=`Agora é ${hora}hs boa noite`
+            foto.src ="boa-noite.png"
+            document.body.style.background="black"
+            document.body.style.color='white'
+           
+        }
+    }
+    </script>
+</body>
+</html>

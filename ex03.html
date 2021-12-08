@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="utpp//..www.terra.com.br">  link</a>
+    </header>
+    <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla error dolore alias asperiores molestiae. Maxime blanditiis sit ea totam accusantium temporibus harum, iure odio doloremque, fuga ipsam consectetur excepturi? Iure?</p></div>
+    <script>
+        let paragrafo = document.createElement('p')
+        let texto =document.createTextNode('consegui transformar')
+        paragrafo.appendChild(texto)
+        let a = document.querySelector('a')
+        let pai = a.parentNode
+        pai.replaceChild(paragrafo , a)
+    </script>
+</body>
+</html>

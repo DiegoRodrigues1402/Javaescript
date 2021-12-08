@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condições em javascript</title>
+</head>
+<body>
+    <h2>Velocidade detran</h2>
+    Qual sua velocidade <input type="number" name="vel" id="txtvel">
+    <input type="button" value="clicar"onclick="clicar()">
+    <div id="res">resultado</div>
+<script>
+/*var vel = prompt('qual sua velocidade')
+if(vel<60){
+    //document.write(`continue assim voce esta dentro do limite de velocidade ${vel}`)
+}else{
+    document.write(`vc foi multado sua velocidade é ${vel}`)
+}*/
+function clicar(){
+var vel = document.getElementById('txtvel')
+var res =document.getElementById('res')
+
+var velo=Number(vel.value)
+res.innerHTML=`sua velocidade atual é ${velo}</br>`
+if(velo < 60){
+    res.innerHTML+=`voce esta dentro da velocidade ${velo}`
+}else{
+    res.innerHTML+=`voce foi multado sua velocidade é ${velo}`
+}
+
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>

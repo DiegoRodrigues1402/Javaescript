@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do voto</title>
+</head>
+<body>
+    <h1>Qual seu páis</h1>
+    <input type="text" id ="texto">
+    <input type="button" value="clicar"onclick="clicar()">
+    <div id="resu"></div>
+
+    <input type="number" name="numero" id="num">
+    <input type="button" value="click" onclick="apertar()">
+    <div id="res"></div>
+    <script>
+function apertar (){
+
+var n1 = document.getElementById('num')
+var res = document.getElementById('res')
+var n2 = Number(n1.value)
+res.innerHTML=n2 
+if(n2>0&&n2<59){res.innerHTML='parabens vc esta abaixo de 60km'}
+else if(n2>=60&&n2<=80){  res.innerHTML=`voce esta dentro da velocidade`}
+else{ res.innerHTML='voce foi multado'}
+}
+
+
+
+
+
+
+
+
+function clicar(){
+var tex = document.getElementById('texto')
+var res =document.getElementById('resu')
+var tex=(tex.value)
+res.innerHTML=tex
+if(tex=='Brasil'){res.innerHTML=`voce é um brasileiro ${tex}`}
+else{res.innerHTML=`voce nâo mora no Brasil você é estrangeiro.  `}
+}
+//var n1 = prompt('qual sua idade')
+
+//if( n1<16){
+
+//document.write(' nao vota')
+
+//}
+//else{
+    //if(n1<18 || n1>=65){
+     //document.write('opicional')
+    
+    //}else{
+//document.write('obrigatorio')
+
+    //}
+//}
+
+///var hora = prompt('que horas sao?')
+
+
+
+//if( hora<12){
+
+//document.write('bom dia')
+
+//}
+//else{
+//if(hora<18){
+    //document.write('boa tarde')
+//}else{
+    //document.write('boa noite')
+//}
+
+//}
+
+
+    </script>
+</body>
+</html>

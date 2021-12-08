@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <script src="aula.js"></script>
+</head>
+<body>
+    <h1 id = "paragrafo">Aprendendo o Dom</h1>
+  <p  id="pa"> Aqui vai o paragráfo</p>
+  <ul>
+  <li class="lista">lista1</li>
+  <li class="lista">lista2</li>
+  <li class="lista">lista3</li>
+  </ul>
+    <script>
+      var res = 'mudou'
+ var para = document.getElementById('paragrafo')
+ para.style.background='#606060'
+ var lista= document.querySelector("#pa")
+ lista.style.background='#606060'
+ lista.innerHTML='agora sim'
+ var lista2 = document.querySelectorAll('.lista')
+ lista2[1].innerHTML='mudou tambem'
+    </script>
+</body>
+</html>

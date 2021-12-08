@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+    <style>
+        body{
+            background-color: rgb(55, 136, 223);
+            color: white;
+        }
+        header{
+            
+            text-align: center;
+        }
+        section{
+            width: 400px;
+            height: 300px;
+            background-color: cornsilk;
+            margin: auto;
+            padding: 10px;
+            color: black;
+        }
+        footer{
+            
+            text-align: center;
+            padding: 5px;
+        
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Tabuada</h1> </header>
+    <section>
+        <div>
+           <p>Numero  <input type="number" name="numero" id="numero">
+            <input type="button" value="gerar"onclick="gerar()"></p> 
+        </div>
+
+        <div >
+            <select name="tabuada" id="tabuada"size='10' >
+                
+            </select>
+        </div>
+
+    </section>
+    <footer>&copy curso em video</footer>
+    <script>
+        function gerar(){
+            var n1 = document.getElementById('numero')
+            var tab = document.getElementById('tabuada')
+            if(n1.value.length == 0){
+              alert('erro digite um numero')
+          }else{
+            var n =Number(n1.value)
+            tab.innerHTML=''
+            for(var c=1;c<=10;c++){
+               
+
+                var item=document.createElement('option')
+
+                item.text =`${n} X ${c} = ${n*c}`
+                tab.appendChild(item)
+                
+                
+            }
+          }
+         
+           
+           
+         
+           
+            
+            
+           
+          
+            
+            
+            
+        }
+        
+        
+    </script>
+</body>
+</html>

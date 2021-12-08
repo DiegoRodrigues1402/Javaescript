@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste final</title>
+</head>
+<body>
+    <header><H1> Analisador de números</H1></header>
+    <section>
+            <div>
+                    <p>Numeros de (1 a 100)  <input type="number" name="numeros" id="fnum"> <input type="button" value="adicionar"onclick="adicionar()"></p>
+                    <select name="flista" id="flista" size="10"> <option>Aqui vem todo resultado</option></select>
+                    <input type="button" value="final" onclick="finalizar()">
+                 </div>
+                 <div id ="resultado">vai aqui resultado</div>
+
+    </section>
+    <footer><p>&copy Curso em video</p></footer>
+    <script>
+          
+                    var num = document.getElementById('fnum')
+                   var lista = document.getElementById('flista')
+                   var res = document.getElementById('resultado')
+                    var valores = []
+                        
+                    function adicionar(){
+                        if(isNumero (num.value) && !inLista (num.value,valores)){
+                            valores.push (Number(num.value))
+                            var item = document.createElement('option')
+                                item.text =`O valor anunciado é ${num.value}`
+                                lista.appendChild(item)
+                                res.innerHTML=''//serve para limpar a barra do select
+                        }   
+                          
+                        else{ 
+                            alert('valor invalido ou ja encontrado')
+                    }
+                        num.value=''//para deixar bloco vazio para proxima digitaçao
+                    }
+                    function isNumero(n){
+                        if(Number(n) >= 1 && Number(n) <= 100){ 
+                            return true
+                        }
+                        else{
+                            return false
+                        }
+                    }
+                    function inLista (n,l){
+
+                        if(l.indexOf(Number(n)) != -1 )
+                        {
+                            return true
+                        }
+                        else{
+                            return false
+                        }
+
+
+                    }function finalizar(){
+                            if (valores.length == 0){
+                                alert('valores vazio')
+                            }else{
+                                res.innerHTML=''
+                                 var soma =0//4
+                                var media =0//5
+                              var tot = valores.length//1
+                                var maior = valores[0]//2
+                                var menor = valores [0]//3
+                               
+                                for (var pos in valores){
+                                    soma+= valores[pos]
+                                if ( valores[pos]>maior)
+                                    maior=valores[pos]
+                                    if(valores[pos]< menor)
+                                    menor =valores[pos]
+
+                                    }
+                                    media = soma/tot
+                              res.innerHTML+=`<p> ao todo temos ${tot } numeros cadastrado</p>`//1
+                                res.innerHTML+= `<p> o maior numero e ${maior}</p>`//2
+                                res.innerHTML+= `<p> o menor numero e ${menor}</p>`//3
+                                res.innerHTML+=  `<p> O resultado de todo valor é ${soma}</p>`//4
+                                 res.innerHTML+=  `<p> A media é ${media}</p>`//5
+                            }
+
+
+                    }
+                        
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    
+</body>
+</html>

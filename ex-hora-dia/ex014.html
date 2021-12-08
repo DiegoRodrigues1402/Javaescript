@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Exercíco</title>
+    <style>
+body {
+    background-color: cornflowerblue;
+
+
+}
+header{
+font-size: 20pt;
+color: cornsilk;
+text-shadow: 2px 2px 2px rgb(61, 16, 16);
+text-align: center;
+
+
+
+}
+footer{
+
+font-family: arial,sans serife;
+font-size: 20px;
+text-shadow: 2px 2px 2px black;
+text-align: center;
+
+
+}
+section{
+background-color: burlywood;
+width: 500px;
+margin: auto;
+margin-top: -30px;
+
+height: 300px;
+border-radius: 10px;
+box-shadow: 5px 5px 5px black;
+border: ridge 5px ;
+
+} 
+div{
+text-align: center;
+padding: 10px;
+font-size: 20px;
+font-family: Arial,  sans-serif;
+
+}
+    </style>
+</head>
+<body onload="carregar()">
+    <header>
+<h1> Horario Local</h1>
+
+</header>
+
+
+<section>
+<div id="horario"> aqui vai horario</div>
+
+<div id="imagem">
+     <img id="foto1"src="manha.jpg" alt="foto manha">
+    </div>
+
+
+</section>
+
+<footer> <p> &copy;Curso em video</p></footer>
+
+<script >
+    function carregar(){
+    var hora =document.getElementById('horario')
+    var img =document.getElementById('foto1')
+    var dt =new Date()
+    var h =dt.getHours()
+    
+      hora.innerHTML= `Agora são exatamente ${h} horas`
+     if(h>=0 && h<=12){
+         
+         document.body.style.background= '#606060'
+    hora.innerHTML=`bom dia ${h} horas`
+    img.src="manha.jpg"}
+    else if(h<=18 ){
+        
+        document.body.style.background= '#808080'
+        hora.innerHTML=`boa tarde  ${h}horas`
+        img.src=" tarde.png"}
+        else{
+            
+            document.body.style.background= '#000000'
+        hora.innerHTML=`boa noite são ${h}horas`
+        img.src='noite.jpg'}
+
+
+
+
+
+        }
+
+</script>
+</body>
+</html

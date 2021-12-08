@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificador de idade</title>
+    <style>
+        body{
+            background-color: rgb(54, 54, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        header{
+            text-align: center;
+            color: white;
+        }
+        article{
+            margin: auto;
+            width: 500px;
+            height: 380px;
+            background-color: cornsilk;
+            padding: 20px;
+        }
+        footer{
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+        }
+        img{
+            border-radius: 50%;
+            
+            
+            
+        }
+        input#idade{
+            margin-top: 10px;
+            
+            
+        }
+        input#masculino{
+            margin-top: 10px;
+        }
+        input#botao{
+            margin-top: 10px;
+
+        }
+        div#res{
+            text-align: center;
+            
+            
+        }
+        div#ft{
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header><h1>Verificador de idade</h1></header>
+    <article>
+        <div id="ano">
+          <strong>Ano de nascimento:</strong>  <input type="number" name="" id="idade"><br>
+           Sexo <input type="radio" name="sexo" id="masculino">Masculino
+           <input type="radio" name="sexo" id="feminino">Feminino<br>
+            <input id="botao" type="button" value="clicar" onclick="clicar()" >
+        </div>
+        <div id="res">
+           
+        </div>
+        <div id="ft">
+            <img id="foto">
+        </div>
+    </article>
+    <footer>&copy Curso em video</footer>
+    <script>
+        function clicar(){
+         var ano1 = new Date()
+        var anoAtual=ano1.getFullYear()
+        var res= document.getElementById('res')
+        var nasc1= document.getElementById('idade')
+        
+        var nasc=Number(nasc1.value)
+       
+           
+        var mas= document.getElementById('masculino')
+        var fem= document.getElementById('feminino')
+     
+        
+       
+        var idade = anoAtual - nasc
+        var foto =document.getElementById('foto')
+        var genero=''
+       
+
+            if(mas.checked){
+                genero='masculino'
+        if(idade>0 && idade<=10 ){
+            
+           foto.src ="menino.jpg"
+        }else if( idade< 16){
+            
+            foto.src="jovem-masc.jpg"
+        }else if(idade<50){
+            
+            foto.src="homem-adulto.jpg"
+        }else if (idade >=50){
+           
+            foto.src="idoso-masc.jpg"
+        }  
+    }
+        if(fem.checked){
+            genero='feminino'
+         if(idade>0 && idade<=10 ){
+          
+           foto.src="menina.jpg"
+        }else if( idade< 16){
+            
+            foto.src="jovem-fem.jpg"
+        }else if(idade<50){
+          
+           foto.src="mulher-adulta.jpg"
+        }else if (idade>=50){
+           
+           foto.src="idoso-fem.jpg"
+        }
+    }
+    res.innerHTML=`uma pessoa do sexo ${genero} com ${idade} anos`
+
+    }
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando atributos</title>
+    <style>
+        .funcionou{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="teste"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium porro iure eum, reprehenderit adipisci ut in necessitatibus ad aliquam praesentium nemo inventore quo itaque cumque nihil sint repellendus, expedita labore?</p></div>
+  <script>
+      
+      var d = document.querySelector('#teste')
+      d.setAttribute('class','funcionou')
+      d.removeAttribute('id')//para remover
+  </script>
+    
+</body>
+</html>

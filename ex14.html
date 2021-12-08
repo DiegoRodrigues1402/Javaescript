@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 0
+      var tempo =  setTimeout(function(){
+            document.writeln('repetir')
+        },1500
+
+        )
+        x =5
+        if(x>0){
+            clearTimeout(tempo)
+            document.writeln('passou')
+            
+        }
+      var tem =   setInterval(function()  {
+            document.writeln('imprimindo')
+        }, 500);
+        setTimeout(function()  {
+           
+            document.writeln('parou')
+            clearInterval(tem)
+            
+        },1500);
+    </script>
+</body>
+</html>
